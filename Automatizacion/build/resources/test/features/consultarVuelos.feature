@@ -9,13 +9,14 @@ Feature: consultarVuelos
   Scenario Outline: check flights
     Given Latam user
     When check round trip flights
-      | origen   |
-      | <origen> |
+      | origen   | destino   |
+      | <origen> | <destino> |
+
     Then validate the different flights available
 
 
     Examples:
-      | origen  |
-      | Pereira |
-
+      | origen                   | destino                             |
+      | Medellín, MDE - Colombia | Pereira, PEI - Colombia             |
+      | Armenia, AXM - Colombia  | Cartagena de Indias, CTG - Colombia |
 

@@ -18,19 +18,19 @@ public class VuelosStepDefinitions {
     public void setStage () { OnStage.setTheStage(new OnlineCast()); }
 
     @Given("^Latam user$")
-    public void latam_user() {
+    public void latamuser() {
         OnStage.theActorCalled("Tania").wasAbleTo(OpenUp.thePage());
     }
 
 
     @When("^check round trip flights$")
-    public void check_round_trip_flights(List<DataConsultaBD> dataConsultaBD) {
+    public void checkroundtripflights(List<DataConsultaBD> dataConsultaBD) {
         OnStage.theActorInTheSpotlight().attemptsTo(ConsultarVuelo.the(dataConsultaBD.get(0)));
 
     }
 
     @Then("^validate the different flights available$")
-    public void validate_the_different_flights_available() {
+    public void validatethedifferentflightsavailable() {
 
     }
 

@@ -9,13 +9,14 @@ Feature: consultarVuelos
   Scenario Outline: check flights
     Given Latam user
     When check round trip flights
-      | origen   | destino   | fechaida   | fechavuelta   | clase   |
-      | <origen> | <destino> | <fechaida> | <fechavuelta> | <clase> |
+      | origen   | destino   |
+      | <origen> | <destino> |
 
     Then validate the different flights available
 
 
     Examples:
-      | origen                  | destino                             | fechaida      | fechavuelta    | clase   |
-      | Pereira, PEI - Colombia | Cartagena de Indias, CTG - Colombia | dom. 5 de jun | dom. 12 de jun | Economy |
+      | origen                   | destino                             |
+      | Medellín, MDE - Colombia | Pereira, PEI - Colombia             |
+      | Armenia, AXM - Colombia  | Cartagena de Indias, CTG - Colombia |
 
